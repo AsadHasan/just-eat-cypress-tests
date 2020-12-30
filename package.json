@@ -1,0 +1,42 @@
+{
+  "name": "just-eat-cypress-tests",
+  "version": "1.0.0",
+  "description": "Cypress tests of just-eat's website",
+  "dependencies": {},
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.11.1",
+    "@typescript-eslint/parser": "^4.11.1",
+    "cypress": "^6.2.0",
+    "eslint": "^7.16.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-cypress": "^2.11.2",
+    "eslint-plugin-import": "^2.22.1",
+    "husky": "^4.3.6",
+    "lint-staged": "^10.5.3",
+    "prettier": "^2.2.1",
+    "typescript": "^4.1.3"
+  },
+  "scripts": {
+    "test": "npx cypress run --record",
+    "browserstack-tests": "browserstack-cypress run --sync"
+  },
+  "keywords": [
+    "Cypress",
+    "Browserstack",
+    "Typescript",
+    "Parallel"
+  ],
+  "author": "Asad Hasan",
+  "license": "MIT",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.ts": "eslint --cache --fix",
+    "*.{js,ts,css,md}": "prettier --write"
+  }
+}

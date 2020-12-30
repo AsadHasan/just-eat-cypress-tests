@@ -1,0 +1,10 @@
+node_modules
+.dccache
+.vscode
+.idea
+videos
+screenshots
+tests.zip
+.eslintcache
+log
+results
