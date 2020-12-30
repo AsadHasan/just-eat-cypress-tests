@@ -2,5 +2,13 @@
   "projectId": "w4jb5b",
   "nodeVersion": "system",
   "baseUrl": "https://www.just-eat.co.uk/",
-  "retries": 1
+  "runMode": 1,
+  "openMode": 0,
+  "lighthouse": {
+    "performance": 85,
+    "accessibility": 50,
+    "best-practices": 85,
+    "seo": 85,
+    "pwa": 50
+  }
 }

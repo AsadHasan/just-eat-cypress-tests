@@ -7,18 +7,18 @@ describe("Restaurants search", () => {
       });
   });
   it("Should be default sorted by 'Best Match'", () => {
-    cy.contains("Sorted by Best match");
+    cy.findByText("Sorted by Best match").should("exist");
   });
   it("Should show popular cuisines", () => {
-    cy.contains("Popular cuisines");
+    cy.get(".c-contentTitle ").findByText("Popular cuisines").should("exist");
     cy.get("[data-test-id=cuisine-carousel]");
   });
   it("Should show all cuisines", () => {
-    cy.contains("All Cuisines A-Z");
+    cy.findByText("All Cuisines A-Z").should("exist");
     cy.get("[data-test-id=all-cuisines-sidebar]");
   });
   it("Should allow filtering results", () => {
-    cy.contains("Filters");
+    cy.get(".c-contentTitle-text").contains("Filters");
     cy.get("[data-test-id=refine-sidebar");
   });
 });

@@ -3,16 +3,20 @@ describe("Restaurant", () => {
     cy.get("[data-test-id=restaurant]").first().click();
   });
   it("Should show a menu", () => {
-    cy.contains("Menu");
+    cy.findByText("Menu").should("exist");
     cy.get("[data-test-id=menu-tab]").find("[data-test-id=menu-category-item]");
   });
   context("Information", () => {
     before(() => {
-      cy.contains("Information").click();
+      cy.findByText("Information").click();
     });
     it("Should show Food Hygiene Rating", () => {
-      cy.contains("Food hygiene rating");
+      cy.findByText("Food hygiene rating").should("exist");
       cy.get("[data-test-id=fsa-image]");
+    });
+    it("Should show location", () => {
+      cy.findByText("Where to find us").should("exist");
+      cy.get("[data-test-id=google-map]");
     });
   });
 });

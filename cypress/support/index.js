@@ -15,6 +15,7 @@
 
 // Import commands.js using ES2015 syntax:
 import "./commands";
+import "cypress-axe";
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
@@ -23,7 +24,8 @@ const postcode = "SW15 5PU";
 
 before(() => {
   cy.visit("");
-  cy.contains("Enter your postcode").type(postcode);
-  cy.contains("Search").click();
+  cy.findByText("Enter your postcode").type(postcode);
+  cy.findByText("Search").click();
   cy.contains(postcode);
+  cy.injectAxe();
 });

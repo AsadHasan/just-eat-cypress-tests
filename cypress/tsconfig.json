@@ -4,7 +4,8 @@
     "module": "commonjs" /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2020', or 'ESNext'. */,
     "lib": [
       "es5",
-      "dom"
+      "dom",
+      "esnext"
     ] /* Specify library files to be included in the compilation. */,
 
     /* Strict Type-Checking Options */
@@ -26,7 +27,9 @@
 
     /* Module Resolution Options */
     "types": [
-      "cypress"
+      "cypress",
+      "cypress-axe",
+      "@testing-library/cypress"
     ] /* Type declaration files to be included in compilation. */,
 
     /* Advanced Options */
