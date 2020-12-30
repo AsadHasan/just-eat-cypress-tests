@@ -52,7 +52,11 @@
     "build_name": "build: ",
     "exclude": [],
     "parallels": 10,
-    "npm_dependencies": {},
+    "npm_dependencies": {
+      "@testing-library/cypress": "^7.0.3",
+      "cypress-audit": "^0.3.0",
+      "cypress-axe": "^0.12.0"
+    },
     "package_config_options": {},
     "specs": [
       "cypress/integration/search_restuarants.spec.ts",

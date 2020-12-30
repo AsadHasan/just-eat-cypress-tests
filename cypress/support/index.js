@@ -27,5 +27,4 @@ before(() => {
   cy.findByText("Enter your postcode").type(postcode);
   cy.findByText("Search").click();
   cy.contains(postcode);
-  cy.injectAxe();
 });
