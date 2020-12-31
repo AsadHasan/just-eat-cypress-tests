@@ -24,7 +24,7 @@
   },
   "scripts": {
     "cypress:open": "npx cypress open",
-    "test": "npx cypress run --record --parallel",
+    "test": "npx cypress run --record --parallel --ci-build-id",
     "browserstack-tests": "browserstack-cypress run --sync"
   },
   "keywords": [
