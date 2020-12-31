@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  justeatcypresstests:
+    image: justeatcypresstests
+    ipc: host
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      CYPRESS_RECORD_KEY: $CYPRESS_RECORD_KEY
+    volumes:
+      - ./cypress/videos:/usr/src/app/cypress/videos
+      - ./cypress/screenshots:/usr/src/app/cypress/screenshots
+
