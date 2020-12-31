@@ -1,21 +1,14 @@
 version: 2.1
+orbs:
+  cypress: cypress-io/cypress@1
 workflows:
-    "Cypress tests":
-        jobs:
-          - cypress-tests
-jobs:
-  cypress-tests:
-    docker:
-      - image: cypress/browsers:node12.18.3-chrome87-ff82
-    parallelism: 4
-    steps:
-      - checkout
-      - restore_cache:
-          keys:
-            - npm-deps-{{ checksum "package-lock.json" }}
-      - save_cache:
-          paths:
-            - ~/usr/local/lib/node_modules  
-          key: npm-deps-{{ checksum "package-lock.json" }}
-      - run: npm ci
-      - run: npm test
+  build:
+    jobs:
+      - cypress/install
+      - cypress/run:
+          requires:
+            - cypress/install
+          record: true
+          parallel: true
+          parallelism: 4
+          group: 4 machines
