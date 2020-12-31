@@ -30,3 +30,5 @@ tests.zip
 .eslintcache
 log
 results
+**/.DS_Store
+
