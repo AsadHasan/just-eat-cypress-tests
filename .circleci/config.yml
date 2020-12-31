@@ -6,6 +6,8 @@ workflows:
     jobs:
       - cypress/install
       - cypress/run:
+          post-install:
+            - run: npm install --only=prod
           requires:
             - cypress/install
           record: true
