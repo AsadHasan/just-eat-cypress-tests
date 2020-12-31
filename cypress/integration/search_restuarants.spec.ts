@@ -3,7 +3,7 @@ describe("Restaurants search", () => {
     cy.get("[data-test-id=restaurant]")
       .children()
       .each((restaurant) => {
-        cy.wrap(restaurant).should("contain", "Delivery");
+        cy.wrap(restaurant).should("contain", "Deliver");
       });
   });
   it("Should be default sorted by 'Best Match'", () => {
