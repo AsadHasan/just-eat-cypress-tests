@@ -29,12 +29,14 @@
     "types": [
       "cypress",
       "cypress-axe",
-      "@testing-library/cypress"
+      "@testing-library/cypress",
+      "cypress-audit",
+      "node"
     ] /* Type declaration files to be included in compilation. */,
 
     /* Advanced Options */
     "skipLibCheck": true /* Skip type checking of declaration files. */,
     "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */
   },
-  "include": ["**/*.ts"]
+  "include": ["**/*.ts", "plugins/index.js"]
 }
