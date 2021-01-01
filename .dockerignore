@@ -29,7 +29,6 @@ LICENSE
 tests.zip
 .eslintcache
 log
-results
+**/results
 **/.DS_Store
 **/reports
-

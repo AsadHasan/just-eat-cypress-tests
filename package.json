@@ -28,7 +28,8 @@
     "cypress:open": "npx cypress open",
     "test": "npx cypress run --record",
     "browserstack-tests": "browserstack-cypress run --sync",
-    "cypress:report": "generate-mochawesome-report"
+    "cypress:report": "generate-mochawesome-report",
+    "test-and-report": "npm test && npm run cypress:report"
   },
   "keywords": [
     "Cypress",
