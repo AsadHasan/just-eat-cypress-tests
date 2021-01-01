@@ -23,7 +23,7 @@ describe("Restaurants search", () => {
     cy.get(".c-contentTitle-text").contains("Filters");
     cy.get("[data-test-id=refine-sidebar");
   });
-  it("Should allow searching results for particular dish or restuarant", () => {
+  it("Should allow searching results for particular dish or restaurant", () => {
     cy.findByText("Search for a dish or restaurant");
   });
 });
