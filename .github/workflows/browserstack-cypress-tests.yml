@@ -10,7 +10,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
       - name: Install Browserstack Cypress CLI
-        run: npm install -g browserstack-cypress-cli
+        run: sudo npm install -g browserstack-cypress-cli
       - name: 'BrowserStack Env Setup'
         uses: 'browserstack/github-actions/setup-env@master'
         with:
