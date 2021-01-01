@@ -6,6 +6,6 @@ jobs:
     working_directory: ~/just-eat-cypress-tests
     steps:
       - checkout
-      - run: npm install -g browserstack-cypress-cli
+      - run: sudo npm install -g browserstack-cypress-cli
       - run: npm test
 
