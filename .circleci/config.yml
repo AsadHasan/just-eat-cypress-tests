@@ -7,5 +7,4 @@ jobs:
     steps:
       - checkout
       - run: sudo npm install -g browserstack-cypress-cli
-      - run: npm test
-
+      - run: npm run browserstack-tests
