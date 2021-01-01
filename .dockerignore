@@ -31,4 +31,5 @@ tests.zip
 log
 results
 **/.DS_Store
+**/reports
 

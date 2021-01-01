@@ -12,4 +12,4 @@ services:
     volumes:
       - ./cypress/videos:/usr/src/app/cypress/videos
       - ./cypress/screenshots:/usr/src/app/cypress/screenshots
-
+      - ./cypress/reports:/usr/src/app/cypress/reports
