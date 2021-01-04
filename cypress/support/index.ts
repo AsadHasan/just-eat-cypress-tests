@@ -24,7 +24,7 @@ import "cypress-mochawesome-reporter/register";
 const postcode = "SW15 5PU";
 
 before(() => {
-  cy.visit("", { failOnStatusCode: false });
+  cy.visit("");
   cy.findByText("Enter your postcode").type(postcode);
   cy.findByText("Search").click();
   cy.contains(postcode);
