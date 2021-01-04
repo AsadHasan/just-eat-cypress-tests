@@ -12,4 +12,5 @@ services:
       - ./cypress/screenshots:/usr/src/app/cypress/screenshots
       - ./cypress/reports:/usr/src/app/cypress/reports
       - ./cypress/results:/usr/src/app/cypress/results
-    command: npm run test-and-report
+    command: [ "npm", "run", "test-and-report" ]
+
